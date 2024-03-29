@@ -2,3 +2,8 @@
     font-family: "Cabin Condensed", sans-serif;
     font-style: normal;
 }
+
+.nav-black {
+    background-color: black;
+    color: white;
+  }
