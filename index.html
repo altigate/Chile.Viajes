@@ -147,12 +147,37 @@
         </div>
     </section>
 
-
+    <!-- Titulo Destacados -->
+    <section class="pb-3 pt-4 align-middle text-center bg-dark text-white">
+        <h2>CONTACTO</h2>
+    </section>
+    <!-- cuerpo de CONTACTO -->
+    <section class="bg-dark text-white">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+          </div>
+          <div class="form-floating">
+            <label for="floatingTextarea2">Mensaje</label>
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          </div>
+          <div>
+             <!-- Tooltips para boton -->
+            <button id="EnviaCorreo" type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="button" title="Presiona para enviar tu correo">
+                Enviar
+            </button>
+          </div>
+    </section>
 
     <!-- Integrando Jquery por CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         const carousel = new bootstrap.Carousel('#myCarousel')
+
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)

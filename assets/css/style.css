@@ -9,7 +9,7 @@
   }
 
 .card-img-top {
-    width: 100%!important;
-    height: 200px!important;
+    width: 100%!important; /*  esta línea obliga a que todas la imagenes de una card tenga el mismo ancho. */
+    height: 200px!important; /*  esta línea obliga a que todas la imagenes de una card tenga el mismo alto. */
     object-fit: cover;
     } 
