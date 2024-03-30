@@ -82,7 +82,7 @@
     </section>
     <!-- cuerpo de quienes somos -->
     <Section class="bg-dark">
-        <div class="row">
+        <div class="row px-5 mx-5">
             <div class="col-4">
                 <h4 class="text-center  bg-info text-white"> 
                     <i class="fa-solid fa-plane"></i> 
@@ -111,7 +111,7 @@
 
     <!-- Cuerpo de Destacados -->
     <section class="bg-dark">
-        <div class="row">
+        <div class="row px-5 mx-5">
             <div class="col-md-3">
                 <div class="card w-100 col-md-auto" style="width: 18rem;">
                     <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
@@ -148,46 +148,65 @@
     </section>
 
     <!-- Titulo Destacados -->
-    <section class="pb-3 pt-4 align-middle text-center bg-dark text-white">
+    <section class="pb-1 pt-5 align-middle text-center bg-dark text-white">
         <h2>CONTACTO</h2>
     </section>
-    <!-- cuerpo de CONTACTO -->
-    <section class="bg-dark text-white">
-        <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-          </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Asunto</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
-          </div>
-          <div class="form-floating">
-            <label for="floatingTextarea2">Mensaje</label>
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-          </div>
-          <div>
-             <!-- Tooltips para boton -->
-            <button id="EnviaCorreo" type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="button" title="Presiona para enviar tu correo">
-                Enviar
-            </button>
-          </div>
+    <!-- Form de CONTACTO -->
+    <section class="bg-dark text-white pb-5">
+            <form action="" class="pt-4 px-5 mx-5">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escriba aqui su nombre completo">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Asunto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="tucorreo@sitio.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div>
+                 <!-- Tooltips para boton -->
+                    <button id="EnviaCorreo" type="button" class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="button" title="Presiona para enviar tu correo">
+                        Enviar
+                    </button>
+                </div>
+            </form>
     </section>
+
+    <footer class="bg-info" >
+        <div class="row px-5 mx-5 text-white text-center align-items-center " style="height: 100px;">
+            <div class="col-6">
+                <h3 >VIAJES CHILE</h3>
+            </div>
+            <!-- Uso de iconos de redes sociales con link en otra venta del navegador target="_blank" rel="noopener noreferrer" -->
+            <div class="col-6">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>    
+    </footer>
 
     <!-- Integrando Jquery por CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <input type="button" id="EnviaCorreo">
     <script>
-        const carousel = new bootstrap.Carousel('#myCarousel')
-
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl)
         })
-
+        //Genera un alert de que el correo fue enviado correctamente. 
+        $('#EnviaCorreo').click(function(){
+            alert('El correo fue enviado correctamente...');
+        });
         $(document).scroll( function(e){
             const y = $("html").scrollTop();
-            if(y > 100) $("nav").addClass("nav-black")
-            else $("nav").removeClass("nav-black")
-            })
+            if(y > 300) $("nav").addClass("dark")
+            else $("nav").removeClass("dark")
+           })
     </script>
 
    <!-- Para usar menús desplegables, ventanas emergentes popovers o tooltips -->
