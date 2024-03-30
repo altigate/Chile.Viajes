@@ -3,6 +3,9 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 .nav-black {
     background-color: black;
     color: white;
@@ -13,3 +16,11 @@
     height: 200px!important; /*  esta línea obliga a que todas la imagenes de una card tenga el mismo alto. */
     object-fit: cover;
     } 
+
+.bg-info{
+        transition: all 1s ease;
+        --bs-bg-opacity: .5;
+        background-image: var(--bs-gradient);
+    }
+/* .nav-colored { background-color:#000; }
+.nav-transparent { background-color:transparent;} */
